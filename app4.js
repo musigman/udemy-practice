@@ -158,3 +158,160 @@ for (let num of numbersTwo) {
 const abbrevs = words.map(function(word) {
   return word.toUpperCase().split().join('.');
 })
+
+// const titles = books.map(function (t) {
+  //   return a.title;
+  
+  // const authors = books.map(function (a) {
+  //   return a.author;
+  // });
+  
+  
+  // const authors = author.map(function (a) {
+    //   return a.author;
+    // })
+    
+    
+    // Arrow functions not supported in IE
+    
+    const square = (x) => {
+      return x * x;
+    }
+    
+    // remember to refresh browser window so code will run!!!
+    
+    const isEven = (even) => {
+      return even % 2 === 0;
+    }
+    
+    const multiply = (x,y) => {
+      return x * y;
+    }
+    
+    // Can leave perans off if there is only one parameter: x vs two parameters (x,y)
+    
+    // If no parameters, use empty () params.
+    
+    // Implicit return: you don't have to write the return.
+    
+    // const squared = n => {
+      //   return n * n;
+      // }
+      
+      // Is the same as
+      
+      // const squared = n => (
+        //   n * n
+        // )
+        
+        // same as:
+        
+        const squared = n => n * n;
+        
+        
+        const nums = [1,2,3,4,5,6,7,8];
+        
+        const doubles1 = nums.map(function (n) {
+          return n * 2;
+        })
+        // const doubles2 = nums.map(n =>
+        //   return n * 2;
+        // })
+        
+        const doubles3 = nums.map(n => n * 2);
+        
+        const paritylist = nums.map ((n) => (
+          n % 2 === 0 ? 'even' : 'odd'
+          ));
+          
+          // tertiary
+          
+          let movies = [
+            "Close Encounters of the Third Kind",
+            "Being There",
+            "Waiting for Guffman",
+            "Napoleon Dynamite",
+            "Rubin and Ed"
+          ]
+          
+          const movie = movies.find(movie => {
+            return movie.includes('for');
+          })
+          
+          const movie2 = movies.find(m => (
+            m.indexOf("Close") === 0
+            ))
+            
+            const books = [{
+              title: 'Life of Pi',
+              author: 'Yan Martel',
+              rating: '5',
+              genres: 'fiction'
+            },
+            { title: 'Illusions',
+              author: 'Richard Bach',
+              rating: '3',
+              genres: 'fiction'
+            },
+            { title: 'A New Earth',
+              author: 'Eckhart Tolle',
+              rating: '5',
+              genres: 'self help'
+            }
+            
+            ]
+            // const worthReading = books.find(b.author >= 3)
+            //   return
+            
+            // const yanBook = books.find(y => (
+            //   b.author.includes('Yan Martel') === 0
+            // ))
+            
+
+            // Filter
+
+            const nums2 = [34, 35, 67, 54, 109, 102, 32, 9 ];
+
+            const odds = nums2.filter(n => n % 2 === 1)
+            const evens = nums2.filter(n => n % 2 === 0)
+
+            const goodBooks = books.filter(b => b.rating >= 3)
+
+            const fictionBooks = books.filter(book => (
+              book.genres.includes('fiction')
+            ))
+
+            const words2 = ['dog', 'dig', 'cat', 'pig', 'got'];
+
+            const all3lets = words2.every(word => word.length ===3);
+            const allEndInG = words2.every(word => {
+              const last = word.length - 1;
+              return word[last] === 'g'
+            })
+
+            const startWithP = words2.some(word => word[0] === 'p');
+
+            const hasAnO = words2.some(word => word[1] === 'o');
+
+            const allGoodBooks = books.every(book => books.rating > 2.5);
+
+
+            const prices = [400.4, 50.2, 99.9, 34.9, 12.0];
+
+
+            const badSort = prices.slice().sort();
+            
+
+            const grades =[87, 88, 32, 78, 99, 73, 70, 201];
+
+            const maxGrade = grades.reduce((max, currVal) => {
+              if(currVal > max) return currVal;
+              return max;
+            });
+            const minGrade = grades.reduce((min, currVal) => (
+              Math.min(min, currVal)
+            ));
+
+            const sum = [10, 20, 30, 40, 50].reduce((sum, currVal) => {
+              return sum + currVal;
+            }, 1000);
